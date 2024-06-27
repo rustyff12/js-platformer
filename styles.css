@@ -8,14 +8,20 @@
     --main-bg-color: #0a0a23;
     --section-bg-color: #ffffff;
     --golden-yellow: #feac32;
+    --red: #ee2e31;
+    --black: #071013;
+    --soft-blue: #2098e2;
+    --accent-blue: #0f95a7;
 }
 
 body {
-    background-color: var(--main-bg-color);
+    background-color: var(--soft-blue);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .start-screen {
-    background-color: var(--section-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--section-bg-color);
     width: 100%;
     position: absolute;
     top: 50%;
@@ -38,20 +44,28 @@ body {
     line-height: 2rem;
 }
 
-.btn {
+.btn,
+.restart-game {
     cursor: pointer;
-    width: 100px;
+    /* width: 100px; */
     margin: 10px;
-    color: #0a0a23;
-    font-size: 18px;
-    background-color: var(--golden-yellow);
-    background-image: linear-gradient(#fecc4c, #ffac33);
+    color: var(--golden-yellow);
+    font-size: 1.35rem;
+    font-weight: 700;
+    background-color: var(--soft-blue);
+    background-image: linear-gradient(var(--soft-blue), var(--accent-blue));
     border-color: var(--golden-yellow);
     border-width: 3px;
+    border-radius: 5px;
+    padding: 0.5rem 3rem;
+    text-decoration: underline;
 }
 
-.btn:hover {
+.btn:hover,
+.restart-game:hover {
     background-image: linear-gradient(#ffcc4c, #f89808);
+    border-color: var(--soft-blue);
+    color: var(--soft-blue);
 }
 
 .btn-container {
@@ -60,19 +74,7 @@ body {
     justify-content: center;
 }
 
-.checkpoint-screen {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    text-align: center;
-    background-color: var(--section-bg-color);
-    border-radius: 20px;
-    padding: 10px;
-    display: none;
-}
+.checkpoint-screen,
 .final-checkpoint {
     position: absolute;
     left: 0;
@@ -81,7 +83,8 @@ body {
     margin-right: auto;
     width: 100%;
     text-align: center;
-    background-color: var(--section-bg-color);
+    background-color: var(--main-bg-color);
+    color: var(--section-bg-color);
     border-radius: 20px;
     padding: 10px;
     display: none;

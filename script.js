@@ -302,12 +302,11 @@ const showFinalCheckpointScreen = (msg) => {
 };
 
 // restart game
-/* restartGame.addEventListener("click", (e) => {
+restartGame.addEventListener("click", (e) => {
     console.log(e.target);
-    // finalScreen.style.display = "none";
-    isCheckpointCollisionDetectionActive = true;
-    startGame();
-}); */
+
+    window.location.reload();
+});
 // restartGame.addEventListener("click", startGame);
 
 startBtn.addEventListener("click", startGame);
